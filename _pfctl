@@ -1,0 +1,17 @@
+#compdef pfctl
+
+local pfctl_modifiers
+pfctl_modifiers=(
+    '(all)all[Flush all]'
+    '(info)info[Flush the filter information']
+    '(nat)nat[Flush the NAT rules]'
+    '(osfp)osfp[Flush the passive operating system fingerprints']
+    '(queue)queue[Flush the queue rules']
+    '(rules)rules[Flush the filter rules']
+    '(state)state[Flush the stable table']
+    '(Sources)Sources[Flush the source tracking table']
+    '(Tables)Tables[Flush the tables']
+)
+
+_argument -s \
+    '-F[Flush the filter parametes specified by modifier]:modifier:($pfctl_modifiers)' \
