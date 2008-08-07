@@ -1,0 +1,31 @@
+    * Improve completion for pkg_tools
+          o Currently nothing listed 
+    * Add completion for portmaster
+    * Improve portupgrade completion
+          o Currently nothing listed 
+    * Improve init script */rc.d completion
+          o add restart
+          o add reload
+          o add support for prefix [fast|force|one]
+          o add status
+          o add poll
+          o add rcvar
+          o add a way to find extra arguments and automatically add it to completion (need examples scripts)
+                + postgresql (initdb)
+                + lighttpd (check) 
+    * Add completion to zfs/zpool (need to be compared and shared with opensolaris)
+          o zpool
+          o zfs 
+    * Add completion for pw
+    * Add completion for cu
+    * Add completion for pfctl
+    * Add completion for camcontrol
+    * Add completion for acpiconf
+          o Check the type available from sysctl 
+    * Add completion for fetch
+    * Add completion for burncd
+    * Add completion for powerd
+    * Add completion for portaudit
+    * Add completion for freebsd-update
+    * Improve completion for ifconfig
+          o Currently nothing listed 
