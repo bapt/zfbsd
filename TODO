@@ -22,9 +22,7 @@
     * Add completion for camcontrol
     * Add completion for acpiconf
           o Check the type available from sysctl 
-    * Add completion for fetch
     * Add completion for burncd
-    * Add completion for powerd
     * Add completion for portaudit
     * Add completion for freebsd-update
     * Improve completion for ifconfig
