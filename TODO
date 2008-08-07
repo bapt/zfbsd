@@ -24,6 +24,5 @@
           o Check the type available from sysctl 
     * Add completion for burncd
     * Add completion for portaudit
-    * Add completion for freebsd-update
     * Improve completion for ifconfig
           o Currently nothing listed 
