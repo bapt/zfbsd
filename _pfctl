@@ -56,12 +56,12 @@ pfctl_debug_level=(
 )
 _iface() {
     local pfctl_iface
-    pfctl_iface=(${(f)"$(pfctl -s Interfaces)"})
+    pfctl_iface=($(pfctl -s Interfaces))
     compadd $pfctl_iface
 }
 _tables() {
     local pfctl_tables
-    pfctl_tables=(${(f)"$(pfctl -s Tables)"})
+    pfctl_tables=($(pfctl -s Tables))
      compadd $pfctl_tables
 }
 # TODO:
