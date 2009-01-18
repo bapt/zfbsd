@@ -1,28 +1,33 @@
-    * Improve completion for pkg_tools
-          o Currently nothing listed 
-    * Add completion for portmaster
-    * Improve portupgrade completion
-          o Currently nothing listed 
-    * Improve init script */rc.d completion
-          o add restart
-          o add reload
-          o add support for prefix [fast|force|one]
-          o add status
-          o add poll
-          o add rcvar
-          o add a way to find extra arguments and automatically add it to completion (need examples scripts)
-                + postgresql (initdb)
-                + lighttpd (check) 
-    * Add completion to zfs/zpool (need to be compared and shared with opensolaris)
-          o zpool
-          o zfs 
-    * Add completion for pw
-    * Add completion for cu
-    * Add completion for pfctl
-    * Add completion for camcontrol
-    * Add completion for acpiconf
-          o Check the type available from sysctl 
-    * Add completion for burncd
-    * Add completion for portaudit
-    * Improve completion for ifconfig
-          o Currently nothing listed 
+- Improve completion for pkg_tools
+  (added Sun Jan 18 17:12:49 2009, incomplete, priority medium)
+
+- Add completion for portmaster
+  (added Sun Jan 18 17:15:11 2009, incomplete, priority medium)
+
+- Improve portupgrade completion
+  (added Sun Jan 18 17:15:37 2009, incomplete, priority medium)
+
+- Improve init script */rc.d completion
+  (added Sun Jan 18 17:18:46 2009, incomplete, priority medium)
+
+- Add completion to zfs/zpool (need to be compared and shared with opensolaris)
+  (added Sun Jan 18 17:21:00 2009, incomplete, priority medium)
+
+- Add completion for pw
+  (added Sun Jan 18 17:21:28 2009, incomplete, priority medium)
+
+- Add completion for cu
+  (added Sun Jan 18 17:21:35 2009, incomplete, priority medium)
+
+- Add completion for camcontrol
+  (added Sun Jan 18 17:22:06 2009, incomplete, priority medium)
+
+- Add completion for acpiconf
+  (added Sun Jan 18 17:22:18 2009, incomplete, priority medium)
+
+- Add completion for burncd
+  (added Sun Jan 18 17:22:47 2009, incomplete, priority medium)
+
+- Improve completion for ifconfig
+  (added Sun Jan 18 17:23:23 2009, incomplete, priority medium)
+
