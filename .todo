@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="medium" time="1232295779" done="1232296188">
+        Add completion for portaudit
+        <comment>
+            done, send-pr, merge from upstream (mfu)
+        </comment>
+    </note>
+    <note priority="medium" time="1232295169">
+        Improve completion for pkg_tools
+        <note priority="medium" time="1232295235">
+            Currently nothing listed
+        </note>
+    </note>
+    <note priority="medium" time="1232295311">
+        Add completion for portmaster
+    </note>
+    <note priority="medium" time="1232295337">
+        Improve portupgrade completion
+        <note priority="medium" time="1232295365">
+            Currently nothing listed
+        </note>
+    </note>
+    <note priority="medium" time="1232295526">
+        Improve init script */rc.d completion
+        <note priority="medium" time="1232295541">
+            add restart
+        </note>
+        <note priority="medium" time="1232295553">
+            add reload
+        </note>
+        <note priority="medium" time="1232295564">
+            add support for prefix [fast|force|one]
+        </note>
+        <note priority="medium" time="1232295568">
+            add status
+        </note>
+        <note priority="medium" time="1232295573">
+            add poll
+        </note>
+        <note priority="medium" time="1232295581">
+            add rcvar
+        </note>
+        <note priority="medium" time="1232295593">
+            add a way to find extra arguments and automatically add it to           completion (need examples scripts)
+            <note priority="medium" time="1232295630">
+                postgresql (initdb)
+            </note>
+            <note priority="medium" time="1232295640">
+                lighttpd (check)
+            </note>
+        </note>
+    </note>
+    <note priority="medium" time="1232295660">
+        Add completion to zfs/zpool (need to be compared and shared with opensolaris)
+        <note priority="medium" time="1232295672">
+            zpool
+        </note>
+        <note priority="medium" time="1232295675">
+            zfs
+        </note>
+    </note>
+    <note priority="medium" time="1232295688">
+        Add completion for pw
+    </note>
+    <note priority="medium" time="1232295695">
+        Add completion for cu
+    </note>
+    <note priority="medium" time="1232295707" done="1232296443">
+        Add completion for pfctl
+        <comment>
+            done, send-pr, mfu
+        </comment>
+    </note>
+    <note priority="medium" time="1232295726">
+        Add completion for camcontrol
+    </note>
+    <note priority="medium" time="1232295738">
+        Add completion for acpiconf
+        <note priority="medium" time="1232295755">
+            Check the type available from sysctl
+        </note>
+    </note>
+    <note priority="medium" time="1232295767">
+        Add completion for burncd
+    </note>
+    <note priority="medium" time="1232295803">
+        Improve completion for ifconfig
+        <note priority="medium" time="1232295816">
+            Currently nothing listed
+        </note>
+    </note>
+</todo>
