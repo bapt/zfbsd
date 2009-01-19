@@ -1,10 +1,19 @@
 <?xml version="1.0"?>
 <todo version="0.1.20">
+    <note priority="medium" time="1232295707" done="1232296443">
+        Add completion for pfctl
+        <comment>
+            done, send-pr, mfu
+        </comment>
+    </note>
     <note priority="medium" time="1232295779" done="1232296188">
         Add completion for portaudit
         <comment>
             done, send-pr, merge from upstream (mfu)
         </comment>
+    </note>
+    <note priority="high" time="1232295688">
+        Add completion for pw
     </note>
     <note priority="medium" time="1232295169">
         Improve completion for pkg_tools
@@ -60,17 +69,8 @@
             zfs
         </note>
     </note>
-    <note priority="medium" time="1232295688">
-        Add completion for pw
-    </note>
     <note priority="medium" time="1232295695">
         Add completion for cu
-    </note>
-    <note priority="medium" time="1232295707" done="1232296443">
-        Add completion for pfctl
-        <comment>
-            done, send-pr, mfu
-        </comment>
     </note>
     <note priority="medium" time="1232295726">
         Add completion for camcontrol
