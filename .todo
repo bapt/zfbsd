@@ -99,6 +99,9 @@
     <note priority="medium" time="1244497601">
         Add completion for mixer
     </note>
+    <note priority="medium" time="1244498241">
+        Add completion for pciconf
+    </note>
     <note priority="verylow" time="1232295337">
         Improve portupgrade completion
         <note priority="medium" time="1232295365">
