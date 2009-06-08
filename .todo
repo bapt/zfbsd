@@ -21,12 +21,6 @@
             Currently nothing listed
         </note>
     </note>
-    <note priority="medium" time="1232295337">
-        Improve portupgrade completion
-        <note priority="medium" time="1232295365">
-            Currently nothing listed
-        </note>
-    </note>
     <note priority="medium" time="1232295526">
         Improve init script */rc.d completion
         <note priority="medium" time="1232295541">
@@ -89,5 +83,11 @@
     </note>
     <note priority="medium" time="1244480700">
         Add completion for iostat
+    </note>
+    <note priority="verylow" time="1232295337">
+        Improve portupgrade completion
+        <note priority="medium" time="1232295365">
+            Currently nothing listed
+        </note>
     </note>
 </todo>
