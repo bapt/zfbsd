@@ -1,7 +1,7 @@
 #compdef procstat
 
 local pids
-#pids=(${${${(f)"$(/usr/bin/procstat -ah)"}/[[:space:]]#/}%%[[:space:]]*})
+#get list of pids and associated process name as comment
 pids=(${${${(f)"$(/usr/bin/procstat -ah)"}/[[:space:]]#/}/[[:space:]]*[[:space:]](ELF32[[:space:]]|-[[:space:]]#)/:})
 
 _arguments -s \

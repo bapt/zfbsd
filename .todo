@@ -72,9 +72,6 @@
             Currently nothing listed
         </note>
     </note>
-    <note priority="medium" time="1244480668">
-        Add completion for fstat
-    </note>
     <note priority="medium" time="1244480687">
         Add completion for vmstat
     </note>
