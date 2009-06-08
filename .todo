@@ -21,9 +21,6 @@
             Currently nothing listed
         </note>
     </note>
-    <note priority="medium" time="1232295311">
-        Add completion for portmaster
-    </note>
     <note priority="medium" time="1232295337">
         Improve portupgrade completion
         <note priority="medium" time="1232295365">
