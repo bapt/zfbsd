@@ -58,6 +58,8 @@ _pw() {
 	  "-w[sets the default method used to set passwords]:methods:((no\:disable\ login yes\:force\ the\ password\ to\ be\ the\ account\ name none\:force\ a\ blank\ password random\:generate\ a\ random\ password))" \
 	  "-s[specify the user shell]:shell:( $shells /sbin/nologin )" \
 	  "-L[Set the login class]:class:" \
+	  "-N[output the result of the operation without updating the user databases]" \
+	  "-P[outputs the account details in a more human readable form]" \
 	  ":Name or uid:_users"
 	  ;;
 	  usershow)

@@ -75,9 +75,6 @@
     <note priority="medium" time="1244480668">
         Add completion for fstat
     </note>
-    <note priority="medium" time="1244480679">
-        Add completion for procstat
-    </note>
     <note priority="medium" time="1244480687">
         Add completion for vmstat
     </note>
