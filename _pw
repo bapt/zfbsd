@@ -1,0 +1,130 @@
+#compdef pw
+
+_pw() {
+  local tmp common_args user_cmn_args
+  common_args=(
+  "-V[Set the alternate location for /etc]:Alternate etc dir:_files -/"
+  '-C[Specify a different configuration file]:Configuration file:_files -g "*.conf"'
+  '-q[Suppress rrror messages]'
+  )
+  user_cmn_args=(
+  '-n[Specify the name]:name:'
+  '-u[Specify the uid]:uid:'
+  )
+  _arguments -s  \
+  '*::command:->commands' && ret=0
+  while [[ -n "$state" ]]; do
+    tmp="$state"
+    state=
+    case "$tmp" in
+      commands)
+      if (( CURRENT == 1 )); then
+	state=subcommands
+      else
+	case "$words[1]" in 
+	  useradd)
+	  ;;
+	  userdel)
+	  _arguments \
+	  $common_args \
+	  $user_cmn_args \
+	  "-r[Remove the user's home directory]" \
+	  "-Y[allow automatic updating of NIS database]" \
+	  ":Name or uid:_users" 
+	  ;;
+	  usermod)
+	  local shells
+	  if [[ -r /etc/shells ]]; then
+	    shells=( ${${(f)"$(</etc/shells)"}:#\#*} )
+	  else
+	    shells=( ${(M)commands:#*/(|[abckz]|tc|ba)sh} )
+	  fi
+
+	  _arguments \
+	  $common_args \
+	  "-Y[allow automatic updating of NIS database]" \
+	  '-n[Specify the name]:name:' \
+	  '-u[Specify the uid]:uid:' \
+	  '-c[Modify the comment]:comment:' \
+	  "-d[Modify the home directory location]:home dir:_directories -W /" \
+	  "-e[Modify the expiration date]:date:" \
+	  "-p[Modify the password expiration date]:date:" \
+	  "-g[Modify the main group]:group:_groups" \
+	  "-G[Modify supplementary groups]:groups:_groups -S," \
+	  "-l[Modify the user name]:name:" \
+	  "-m[Attempt to create the user's directory]" \
+	  "-M[Create the user’s home directory with the specified mode]:mode:" \
+	  "-k[Skeleton for the home directory creation]:skeleton dir:_directories -W /" \
+	  "-w[sets the default method used to set passwords]:methods:((no\:disable\ login yes\:force\ the\ password\ to\ be\ the\ account\ name none\:force\ a\ blank\ password random\:generate\ a\ random\ password))" \
+	  "-s[specify the user shell]:shell:( $shells /sbin/nologin )" \
+	  "-L[Set the login class]:class:" \
+	  ":Name or uid:_users"
+	  ;;
+	  usershow)
+	  _arguments \
+	  $common_args \
+	  '-n[Specify the name]:name:' \
+	  '-u[Specify the uid]:uid:' \
+	  "-F[forces pw to print the details of an account]" \
+	  "-P[outputs the account details in a more human readable form]" \
+	  "-7[show account details in v7 format]" \
+	  "-a[lists all users currently on file]" \
+	  ":Name|uid:_users"
+
+	  ;;
+	  (user|group)next)
+	  	return 0
+	  ;;
+	  groupadd)
+	  _arguments \
+	  $common_args \
+	  $user_cmn_args
+	  ;;
+	  groupdel)
+	  _arguments \
+	  $common_args \
+	  $user_cmn_args
+	  ;;
+	  groupmod)
+	  _arguments \
+	  $common_args \
+	  $user_cmn_args
+	  ;;
+	  groupshow)
+	  _arguments \
+	  $common_args \
+	  $user_cmn_args
+	  ;;
+	  lock|unlock)
+	  _arguments \
+	  $common_args \
+	  ":User to $words[1]:_users"
+	  ;;
+	  *)
+	  _message 'command not found'
+	  ;;
+	esac
+      fi
+      ;;
+      subcommands)
+      subcmds=(
+      'useradd[Add a user]'
+      'userdel[Delete a user]'
+      'usermod[Modify a user]'
+      'usershow[Show informations about a user]'
+      'usernext'
+      'groupdadd[Add a group]'
+      'groupdel[Delete a group]'
+      'groupmod[Modify a group]'
+      'groupshow[Show information about a group]'
+      'groupnext'
+      'lock[lock a user]'
+      'unlock[unlock a user]'
+      )
+      _values "pw command" $subcmds && return 0
+      ;;
+    esac
+  done
+}
+
+_pw "$@"
