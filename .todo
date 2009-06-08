@@ -78,6 +78,27 @@
     <note priority="medium" time="1244480700">
         Add completion for iostat
     </note>
+    <note priority="medium" time="1244497325">
+        Add completion for cdcontrol
+    </note>
+    <note priority="medium" time="1244497336">
+        Add completion for atacontrol
+    </note>
+    <note priority="medium" time="1244497356">
+        Add completion for usbconfig
+    </note>
+    <note priority="medium" time="1244497452">
+        Add completion for geom
+    </note>
+    <note priority="medium" time="1244497526">
+        Add completion for netgraph
+    </note>
+    <note priority="medium" time="1244497571">
+        Add completion bsdlabel/disklabel and fdisk
+    </note>
+    <note priority="medium" time="1244497601">
+        Add completion for mixer
+    </note>
     <note priority="verylow" time="1232295337">
         Improve portupgrade completion
         <note priority="medium" time="1232295365">
