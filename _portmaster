@@ -1,22 +1,11 @@
 #compdef portmaster
 
-(( $+functions[_portmaster_pkgs] )) ||
 _portmaster_pkgs() {
   compadd "$@" - ${PKG_DBDIR:-/var/db/pkg}/*(/:t)
 }
 
-(( $+functions[_portmaster_ports] )) ||
 _portmaster_ports() {
-  local ret=1 available_ports
-#  if ( [[ $+_fbsd_ports -eq 0 ]] || _cache_invalid FBSD_PORTS ) && ! _retrieve_cache FBSD_PORTS ;then
-#    typeset -gaU _fbsd_ports
-#    _fbsd_ports=(${PORTSDIR:-/usr/ports}/[a-z]*/*(/:s#${PORTSDIR:-/usr/ports/}#)) 
-##    _fbsd_ports=(${_fbsd_ports%%/})
-#    _store_cache FBSD_PORTS _fbsd_ports 
-#  fi
-
-#  _wanted cat_packages expl 'category/ports' _multi_parts "$@" / _fbsd_ports
-#  _path_files "$@" -W ${PORTSDIR:-/usr/ports} -/ -g [a-z]*  && ret=0
+  local ret=1 _fbsd_ports _fbsd_cat
    _fbsd_cat=(${PORTSDIR:-/usr/ports}/[a-z]*(/:t))
    if [[ $PREFIX != */* ]] ; then
      _wanted cat_packages expl 'category/ports' compadd -S '/' $_fbsd_cat
@@ -28,7 +17,6 @@ _portmaster_ports() {
   return ret
 }
 
-(( $+functions[_portmaster_pkgs_and_ports] )) ||
 _portmaster_pkgs_and_ports() {
   local ret=1
   _portmaster_pkgs && ret=0
