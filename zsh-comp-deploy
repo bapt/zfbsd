@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+# get some zsh envrionnement installation on FreeBSD
+ZSH_CMD=`which zsh`
+ZSH_VERSION=`${ZSH_CMD} --version | sed -n 's/zsh \(.*\) .*/\1/p'`
+ZSH_PREFIX=`make -C /usr/ports/shells/zsh -V PREFIX`
+
+# add completions files in completion directory
+for file ( _* ) sudo cp $file ${ZSH_PREFIX}/share/zsh/${ZSH_VERSION}/functions/Completion/BSD/
+
+# update completion files
+autoload -Uz compinit
+compinit
