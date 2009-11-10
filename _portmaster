@@ -32,6 +32,7 @@ _portmaster() {
   '--clean-distfiles-all[delete distfiles not associated with an installed ports]'
   '--check-depends[cross-check and update dependency information for all ports]'
   '--check-port-dbdir[check for stale entries in /var/db/ports]'
+  '--list-origins[list directories from /usr/ports for root and leaf ports]'
   '-l[list all installed ports by category]'
   '-L[list all installed ports by category, and search for updates]'
   {'(-help)-h','(-h)--help'}'[display help message]:'
